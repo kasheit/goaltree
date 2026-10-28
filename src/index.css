@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #121110;
+  --surface: #1c1a18;
+  --line: #332e28;
+  --line-soft: #49423a;
+  --conn: #58504663;
+  --conn-trunk: #58504691;
+  --text: #f1ede6;
+  --text-muted: #9c9389;
+  --text-dim: #655d53;
+  --accent: #e07b3f;
+  --done: #7ea878;
+  --blocked: #c15a4d;
+  --font-display: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* React Flow chrome, restyled to match the dark, grid-free mockup */
+.react-flow {
+  background: var(--bg);
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__pane {
+  cursor: default;
+}
